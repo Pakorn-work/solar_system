@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading manager</title>
+    <style>
+        body {
+            margin: 0
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar-container">
+        <label for="progress-bar">Loading...</label>
+        <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+  <script type="module">
+    import * as THREE from 'https://unpkg.com/three@0.126.1/build/three.module.js';
+    import { FirstPersonControls } from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/FirstPersonControls.js';
+    import { GLTFLoader } from 'https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js';
+    import { RGBELoader } from 'https://unpkg.com/three@0.126.1/examples/jsm/loaders/RGBELoader.js';
+
+
+    var projector = new THREE.Projector();
+    var mouse2D = new THREE.Vector2(0, 0);
+    var mouse3D = new THREE.Vector3(0, 0, 0);
+
+    document.body.onmousemove = function highlightObject(event) {
+    mouse3D.x = mouse2D.x = mouse2D.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse3D.y = mouse2D.y = mouse2D.y = -(event.clientY / window.innerHeight) * 2 + 1;
+    mouse3D.z = 0.5;
+
+    projector.unprojectVector(mouse3D, camera);
+    var raycaster = new THREE.Raycaster(camera.position, mouse3D.sub(camera.position).normalize());
+    var intersects = raycaster.intersectObject(mesh);
+     if (intersects.length > 0) {
+         var obj = intersects[0].object; //the object that was intersected
+         rotate = false;
+     } else {
+         rotate = true;
+     }
+}
+  </script>
+</body>
+</html>

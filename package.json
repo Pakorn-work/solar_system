@@ -1,0 +1,17 @@
+{
+  "name": "solar_system",
+  "version": "1.0.0",
+  "description": "our little project",
+  "main": "solar_app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.0.11"
+  },
+  "dependencies": {
+    "three": "^0.126.1"
+  }
+}
