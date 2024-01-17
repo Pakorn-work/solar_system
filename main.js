@@ -11,6 +11,7 @@ import { OutputPass } from 'https://unpkg.com/three@0.126.1/examples/js/postproc
 import { FXAAShader } from 'https://unpkg.com/three@0.126.1/examples/js/shaders/FXAAShader.js';
 */
 
+// nigger
 const scene = new THREE.Scene();
 
 // Create a camera
