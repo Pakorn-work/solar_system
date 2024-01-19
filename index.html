@@ -58,6 +58,10 @@ Plz touch with care
         will-change: transform;
       }
 
+      .disable-input {
+      pointer-events: none;
+      }
+
       #myButton {
         display: none;
         position: fixed; 
@@ -65,6 +69,18 @@ Plz touch with care
         right: 10px; 
         padding: 10px;
         background-color: #3498db;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+
+      #HomeButton {
+        display: none;
+        position: fixed; 
+        bottom: 10px; 
+        right: 10px; 
+        padding: 10px;
+        background-color: #3b7119;
         color: #fff;
         border: none;
         cursor: pointer;
@@ -79,7 +95,7 @@ Plz touch with care
    </div>
    
    <button id="myButton">Pause</button>
-   
+   <button id="HomeButton">Home</button>
 
 
     <script type="module" src="/main.js"></script>
