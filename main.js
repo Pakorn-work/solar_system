@@ -194,8 +194,6 @@ function Mainmenu() {
             requestAnimationFrame(animateCamera);
           } else {
             camera.lookAt(0, 0, 0);
-            onAnimate = true;
-            
             document.getElementById("myButton").style.display = "block";
             document.getElementById("HomeButton").style.display = "none";
             document.body.classList.remove('disable-input');
