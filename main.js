@@ -161,10 +161,8 @@ function fitCameraToObject(object) {
     }
 
     console.log(
-      "After fitCameraToObject - Camera Position:",
-      camera.position.clone(),
-      "LookAt:",
-      target
+      "After fitCameraToObject - Camera Position:",camera.position.clone(),
+      "LookAt:",target
     );
 
     requestAnimationFrame(animateCamera);
