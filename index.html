@@ -10,92 +10,31 @@ Plz touch with care
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Three.js SolarSystem_game</title>
-    <style>
-      body {
-            margin: 0
-        }
-
-        .progress-bar-container {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        label {
-            color: white;
-            font-size: 2rem;
-        }
-
-        @keyframes spinner {
-        0% {
-          transform: translate3d(-50%, -50%, 0) rotate(0deg);
-        }
-        100% {
-          transform: translate3d(-50%, -50%, 0) rotate(360deg);
-        }
-      }
-      .spin::before {
-        animation: 1.5s linear infinite spinner;
-        animation-play-state: inherit;
-        border: solid 5px #cfd0d1;
-        border-bottom-color: #1c87c9;
-        border-radius: 50%;
-        content: "";
-        height: 40px;
-        width: 40px;
-        margin-top: 40px;
-        position: absolute;
-        transform: translate3d(-50%, -50%, 0);
-        will-change: transform;
-      }
-
-      .disable-input {
-      pointer-events: none;
-      }
-
-      #myButton {
-        display: none;
-        position: fixed; 
-        top: 10px; 
-        right: 10px; 
-        padding: 10px;
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-
-      #HomeButton {
-        display: none;
-        position: fixed; 
-        bottom: 10px; 
-        right: 10px; 
-        padding: 10px;
-        background-color: #3b7119;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-      }
-
-    </style>
   </head>
   <body>
     <div class="progress-bar-container">
       <label id="progress-bar-label" for="progress-bar">Loading...</label>
-      <div id="progress-bar" class="spin"></div><div id="buttonContainer"></div>
+      <div id="progress-bar" class="spin"></div>
    </div>
    
    <button id="myButton">Pause</button>
    <button id="HomeButton">Home</button>
+   <button id="VenusAsmostfear">Remove</button>
+   <button id="NavigateButton">Navigate</button>
+   <div class = "NavigateButton">
+    <button id="plutoNavigateButton"></button>
+    <button id="mecuryNavigateButton"></button>
+    <button id="venusNavigateButton"></button>
+    <button id="earthNavigateButton"></button>
+    <button id="marsNavigateButton"></button>
+    <button id="jupiterNavigateButton"></button>
+    <button id="saturnNavigateButton"></button>
+    <button id="uranusNavigateButton"></button>
+    <button id="neptuneNavigateButton"></button>
+   </div>
+   <button id="moonNavigateButton">GoToMoon</button>
 
 
     <script type="module" src="/main.js"></script>

@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.progress-bar-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: white;
+    font-size: 2rem;
+}
+
+@keyframes spinner {
+0% {
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+}
+100% {
+  transform: translate3d(-50%, -50%, 0) rotate(360deg);
+}
+}
+.spin::before {
+animation: 1.5s linear infinite spinner;
+animation-play-state: inherit;
+border: solid 5px #cfd0d1;
+border-bottom-color: #1c87c9;
+border-radius: 50%;
+content: "";
+height: 40px;
+width: 40px;
+margin-top: 40px;
+position: absolute;
+transform: translate3d(-50%, -50%, 0);
+will-change: transform;
+}
+
+.disable-input {
+pointer-events: none;
+}
+
+#myButton {
+display: none;
+position: fixed; 
+top: 10px; 
+right: 10px; 
+padding: 10px;
+background-color: #3498db;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+#HomeButton {
+display: none;
+position: fixed; 
+bottom: 10px; 
+right: 10px; 
+padding: 10px;
+background-color: #3b7119;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+
+
+#VenusAsmostfear {
+    display: none;
+    position: fixed; 
+    bottom: 10px; 
+    left: 100px;  
+    padding: 10px;
+    background-color: #3b7119;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#NavigateButton {
+    display: none;
+    position: fixed; 
+    bottom: 10px; 
+    left: 10px; 
+    padding: 10px;
+    background-color: #611971;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.NavigateButton {
+    color: aqua;
+    display: none;
+}
+
+    #mecuryNavigateButton {
+        background: url(./public/mercury-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 230px;
+        left: 10px;
+        width:70px;
+        height:70px;
+    }
+    #venusNavigateButton {
+        background: url(./public/venus-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 230px;
+        left: 95px;
+        width:70px;
+        height:70px;
+    }
+    #earthNavigateButton {
+        background: url(./public/Earth-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 230px;
+        left: 180px;
+        width:70px;
+        height:70px;
+    }
+    #marsNavigateButton {
+        background: url(./public/mars-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 145px;
+        left: 10px;
+        width:70px;
+        height:70px;
+    }
+    #jupiterNavigateButton {
+        background: url(./public/jupiter-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 145px;
+        left: 95px;
+        width:70px;
+        height:70px;
+    }
+    #saturnNavigateButton {
+        background: url(./public/saturn-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 155px;
+        left: 180px;
+        width:80px;
+        height:48px;
+    }
+    #uranusNavigateButton {
+        background: url(./public/uranus-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 60px;
+        left: 10px;
+        width:70px;
+        height:70px;
+    }
+    #neptuneNavigateButton {
+        background: url(./public/neptune-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 60px;
+        left: 95px;
+        width:70px;
+        height:70px;
+    }
+    #plutoNavigateButton {
+        background: url(./public/pluto-icon.png);
+        background-size: cover;
+        cursor:pointer;
+        position: fixed;
+        border:none;
+        bottom: 60px;
+        left: 180px;
+        width:70px;
+        height:70px;
+    }
+#moonNavigateButton {
+    display: none;
+    position: fixed; 
+    bottom: 10px; 
+    left: 100px; 
+    padding: 10px;
+    background-color: #5a696f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
