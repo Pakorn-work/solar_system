@@ -166,6 +166,7 @@ function fitCameraToObject(object) {
         if (progress < 1) {
             requestAnimationFrame(animateCamera);
         } else {
+<<<<<<< Updated upstream
             controls.target.set(target.x, target.y, target.z);
             document.body.classList.remove('disable-input');
             //if for every planet
@@ -176,6 +177,11 @@ function fitCameraToObject(object) {
             } 
               
             
+          controls.target.set(target.x, target.y, target.z);
+          document.body.classList.remove('disable-input');
+          if(object.name === 'nigga') {
+            document.getElementById("popup").style.display = 'block'
+          }
         }
 
         controls.update();
@@ -199,6 +205,7 @@ function Mainmenu() {
         document.getElementById("HomeButton").style.display = "none";
         document.getElementById("VenusAsmostfear").style.display = "none";
         document.getElementById("moonNavigateButton").style.display = "none";
+        document.getElementById("popup").style.display = 'none'
 
         const targetPosition = new THREE.Vector3(0, 100, 700);
         const startPosition = camera.position.clone();
@@ -362,6 +369,17 @@ scene.add(ambientLight);
   mercury.position.set(50, 0, 0);
   scene.add(mecuryOrbit);
   mecuryOrbit.add(mercury);
+const mercuryGeometry = new THREE.SphereGeometry(2.5, 32, 32);
+const mercuryMaterial = new THREE.MeshStandardMaterial({
+  map: mercuryTexture,
+  emissiveMap: mercuryTexture,
+});
+const mecuryOrbit = new THREE.Object3D();
+const mercury = new THREE.Mesh(mercuryGeometry, mercuryMaterial);
+mercury.name ='nigga'
+mercury.position.set(50, 0, 0);
+scene.add(mecuryOrbit);
+mecuryOrbit.add(mercury);
 
   const mercuryOrbitSpeed = 0.0414; // ค่านี้กุหาร 100 ทุกดาวเลยนะ มันจะได้หมุนช้าๆ
   const mecuryspinspeed = 0.0149; // ตัวนี้ด้วย หาร100 จากค่าจริง
